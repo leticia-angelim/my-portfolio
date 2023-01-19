@@ -113,24 +113,13 @@ export const Button = styled("button", {
         ["& + a"]: {
           marginLeft: "$2",
         },
-        ["&.instagram"]: {
-          backgroundColor: "$socialInstagram",
-          borderColor: "$socialInstagram",
+        ["&.github"]: {
+          backgroundColor: "$socialGithub",
+          borderColor: "$socialGithub",
           color: "$whiteFixed",
           "&:hover": {
-            backgroundColor: "transparent",
-            borderColor: "$socialInstagram",
-            color: "$socialInstagram",
-          },
-        },
-        ["&.facebook"]: {
-          backgroundColor: "$socialFacebook",
-          borderColor: "$socialFacebook",
-          color: "$whiteFixed",
-          "&:hover": {
-            backgroundColor: "transparent",
-            borderColor: "$socialFacebook",
-            color: "$socialFacebook",
+            borderColor: "white",
+            color: "$socialGithub",
           },
         },
         ["&.linkedin"]: {

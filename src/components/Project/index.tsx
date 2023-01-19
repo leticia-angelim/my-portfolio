@@ -27,7 +27,7 @@ export const Project = (): JSX.Element => {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch(
-        `https://api.github.com/users/${userData.githubUser}/repos?sort=created&direction=desc`
+        `https://api.github.com/users/${userData.githubUser}/repos`
       );
 
       const json = await data.json();
@@ -81,10 +81,7 @@ export const Project = (): JSX.Element => {
                 <FaGithub /> Github Code
               </ProjectLink>
               {repository.homepage && (
-                <ProjectLink
-                  target="_blank"
-                  href={`https://${repository.homepage}`}
-                >
+                <ProjectLink target="_blank" href={`${repository.homepage}`}>
                   <FaShare /> See demo
                 </ProjectLink>
               )}

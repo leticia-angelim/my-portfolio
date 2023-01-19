@@ -2,6 +2,7 @@
 import { Container, Flex } from "@/styles/Global";
 import { Text } from "@/styles/Text";
 import { Button } from "@/styles/Buttons";
+import { TiHeart } from "react-icons/ti";
 
 // Components
 import { Stack } from "@/components/Stack";
@@ -11,8 +12,6 @@ import { Contacts } from "@/components/Contacts";
 // Data
 import { stackData } from "@/utils/stackData";
 import { userData } from "@/utils/userData";
-
-import { FaGithub } from "react-icons/fa";
 
 // Page Style
 import {
@@ -28,7 +27,6 @@ import {
 } from "./style";
 
 export const Home = (): JSX.Element => {
-  const gihubUrl = `https://github.com/${userData.githubUser}`;
   const portfolioUrl = `https://github.com/${userData.githubUser}/my-portfolio`;
 
   return (
@@ -47,15 +45,20 @@ export const Home = (): JSX.Element => {
               <Text color="grey4">Hello, my name is {userData.nameUser}</Text>
             </Flex>
             <Text as="h1" type="heading1" color="grey5">
-            I{" "}
+              I{" "}
               <Text as="span" type="heading1" color="brand1">
                 love
               </Text>{" "}
-              creating and{" "}
+              to code{" "}
               <Text as="span" type="heading1" color="brand1">
-                developing
+                <TiHeart size={45} />{" "}
               </Text>{" "}
-              projects
+              <br />
+              and{" "}
+              <Text as="span" type="heading1" color="brand1">
+                solve
+              </Text>{" "}
+              problems
             </Text>
             <Text type="body1" color="grey2">
               Discover here in this environment, created especially for you, all
@@ -67,16 +70,6 @@ export const Home = (): JSX.Element => {
               </Button>
               <Button as="a" type="outline" target="_blank" href={portfolioUrl}>
                 See my portfolio source code
-              </Button>
-              <Button
-                color="grey5"
-                as="a"
-                css={{ "&:hover": { color: "$grey1" } }}
-                type="circle"
-                target="_blank"
-                href={gihubUrl}
-              >
-                <FaGithub />
               </Button>
             </HeaderButtonsArea>
             <StackCards>
