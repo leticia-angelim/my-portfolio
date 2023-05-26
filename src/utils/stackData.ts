@@ -1,4 +1,9 @@
-import { SiPostgresql, SiTypescript, SiDjango } from "react-icons/si";
+import {
+  SiPostgresql,
+  SiTypescript,
+  SiDjango,
+  SiNextdotjs,
+} from "react-icons/si";
 import { FaGit, FaPython } from "react-icons/fa";
 import { FaHtml5, FaCss3Alt, FaJs, FaNode, FaReact } from "react-icons/fa";
 
@@ -28,4 +33,5 @@ export const stackData = [
   { title: "Git", img: FaGit },
   { title: "Python", img: FaPython },
   { title: "Django", img: SiDjango },
+  { title: "Next JS", img: SiNextdotjs },
 ];
